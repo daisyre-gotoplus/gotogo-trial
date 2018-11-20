@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget id="com.daisyre.paet" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">  
+
+  <!-- versionCode is optional and Android only -->
+
+  <name>Goto Go</name>
+
+  <description>
+   Booking
+  </description>
+
+  <author href="https://github.com/daisyre-gotoplus/gotogo-trial" email="daisyre.gotoplus@gmail.com">
+   Goto Plus Inc.
+  </author>
+
+  <content src="index.php"/>
+  <preference name="phonegap-version" value="cli-6.3.0" />
+  <preference name="orientation" value="default" /><!-- all: default means both landscape and portrait are enabled -->
+  <preference name="target-device" value="universal" /><!-- all: possible values handset, tablet, or universal -->
+  <preference name="fullscreen" value="true" /><!-- all: hides the status bar at the top of the screen -->
+  <preference name="android-installLocation" value="auto" />
+  <preference name="android-minSdkVersion" value="16" />
+
+  <feature name="Geolocation">
+    <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
+  </feature>
+
+
+
+  <plugin name="cordova-plugin-battery-status" />
+  <plugin name="cordova-plugin-camera" />
+  <plugin name="cordova-plugin-media-capture" />
+  <plugin name="cordova-plugin-console" />
+  <plugin name="cordova-plugin-contacts" />
+  <plugin name="cordova-plugin-device" />
+  <plugin name="cordova-plugin-device-motion" />
+  <plugin name="cordova-plugin-device-orientation" />
+  <plugin name="cordova-plugin-dialogs" />
+  <plugin name="cordova-plugin-file" />
+  <plugin name="cordova-plugin-file-transfer" />
+  <plugin name="cordova-plugin-geolocation" />
+  <plugin name="cordova-plugin-globalization" />
+  <plugin name="cordova-plugin-inappbrowser" />
+  <plugin name="cordova-plugin-media" />
+  <plugin name="cordova-plugin-network-information" />
+  <plugin name="cordova-plugin-splashscreen" />
+  <plugin name="cordova-plugin-vibration" />
+  <!--
+    This allows your app to load assets from all *.phongap.com domains
+  -->
+  <platform name="android">
+    <icon src="res/icon/android/mdpi.png" qualifier="mdpi" />
+    <icon src="res/icon/android/hdpi.png" qualifier="hdpi" />
+    <icon src="res/icon/android/xhdpi.png" qualifier="xhdpi" />
+    <icon src="res/icon/android/xxhdpi.png" qualifier="xxhdpi" />
+    <icon src="res/icon/android/xxxhdpi.png" qualifier="xxxhdpi" />
+  </platform>
+
+  <!--access origin="*" subdomains="true" /-->
+  <access origin="*"/>
+
+  <plugin name="cordova-plugin-whitelist" spec="1" />
+  <icon src="img/F.png" />
+
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+  <allow-intent href="tel:*" />
+  <allow-intent href="sms:*" />
+  <allow-intent href="mailto:*" />
+  <allow-intent href="geo:*" />
+  <platform name="android">
+    <allow-intent href="market:*" />
+  </platform>
+  <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true" />
+  </feature>
+</widget>
